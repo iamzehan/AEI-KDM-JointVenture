@@ -5,8 +5,14 @@ import { useState } from "react";
 
 export default function Navbar() {
   const [isOpen, setMenu] = useState(false);
-
+  const [isClicked, setClicked] = useState(false);
   const handleMenu = () => setMenu(!isOpen);
+
+  // Called when a nav link is clicked: close the mobile menu and reset click state
+  const handleLinkClick = () => {
+    setMenu(false);
+    setClicked(false);
+  };
 
   return (
     <nav className="sticky top-0 z-50 dark:bg-white flex justify-between items-center p-2 md:p-4">
@@ -29,7 +35,7 @@ export default function Navbar() {
 
       {/* Desktop Links */}
       <ul className="hidden md:flex space-x-4">
-        <NavLinks />
+        <NavLinks click={handleLinkClick} />
       </ul>
 
       {/* Mobile Burger Button */}
@@ -60,11 +66,16 @@ export default function Navbar() {
       {/* Mobile Menu */}
       <div
         className={clsx(
-          "absolute list-none top-full left-0 w-full bg-white flex flex-col items-end p-4 border-t border-gray-300 gap-4 md:hidden transition-all duration-300",
-          { hidden: !isOpen }
+            "absolute list-none top-full left-0 w-full bg-white flex flex-col items-center p-4 border-t border-gray-300 gap-4 md:hidden transform origin-top transition-all duration-500 overflow-hidden z-40",
+          {
+              // closed: hidden height, shifted up (so it comes from behind the nav), no pointer events
+              "opacity-0 scale-y-0 -translate-y-100 pointer-events-none": !isOpen || isClicked,
+              // open: full height, positioned at natural place
+              "opacity-100 scale-y-100 translate-y-0": isOpen && !isClicked,
+          }
         )}
       >
-        <NavLinks />
+        <NavLinks click={handleLinkClick} />
       </div>
     </nav>
   );
