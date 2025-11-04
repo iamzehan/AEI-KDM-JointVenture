@@ -20,7 +20,11 @@
     --foreground: #ededed;
   }
 }
-
+@layer utilities {
+  .transition-width {
+    transition-property: width;
+  }
+}
 body {
   background: var(--background);
   color: var(--foreground);
