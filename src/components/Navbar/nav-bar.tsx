@@ -66,12 +66,12 @@ export default function Navbar() {
       {/* Mobile Menu */}
       <div
         className={clsx(
-            "absolute list-none top-full left-0 w-full bg-white flex flex-col items-center p-4 border-t border-gray-300 gap-4 md:hidden transform origin-top transition-all duration-500 overflow-hidden z-40",
+            "absolute list-none top-full right-0 w-50 bg-white flex flex-col items-center border-t border-gray-300/10 gap-1 md:hidden transform origin-top transition-all duration-500 overflow-hidden z-40 rounded-b-lg",
           {
-              // closed: hidden height, shifted up (so it comes from behind the nav), no pointer events
-              "opacity-0 scale-y-0 -translate-y-100 pointer-events-none": !isOpen || isClicked,
+              // closed: hidden height, shifted right (so it comes from behind the nav), no pointer events
+              "opacity-0 scale-x-0 translate-x-100 pointer-events-none delay-400": !isOpen,
               // open: full height, positioned at natural place
-              "opacity-100 scale-y-100 translate-y-0": isOpen && !isClicked,
+              "opacity-100 scale-x-100 translate-x-0": isOpen && !isClicked,
           }
         )}
       >
