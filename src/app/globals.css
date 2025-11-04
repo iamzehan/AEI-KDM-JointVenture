@@ -3,6 +3,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  -webkit-scrollbar-width: none;
+  scrollbar-width: none;
 }
 
 @theme inline {
