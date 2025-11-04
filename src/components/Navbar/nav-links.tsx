@@ -13,7 +13,7 @@ export default function NavLinks({ click }: { click?: () => void }) {
         <li
           key={index}
           className={clsx(
-            "w-1/2 px-4 py-2 rounded transition-colors duration-300 flex justify-center",
+            "w-full px-4 py-2 rounded transition-colors duration-300 flex justify-center",
             {
               "text-lime-600 font-bold bg-lime-300": pathname === link.href,
               "text-blue-950 font-bold hover:text-lime-600": pathname !== link.href,
