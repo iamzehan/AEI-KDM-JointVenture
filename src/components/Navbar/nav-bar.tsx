@@ -6,12 +6,16 @@ import { useState } from "react";
 export default function Navbar() {
   const [isOpen, setMenu] = useState(false);
   const [isClicked, setClicked] = useState(false);
+
   const handleMenu = () => setMenu(!isOpen);
 
-  // Called when a nav link is clicked: close the mobile menu and reset click state
+  // Called when a nav link is clicked: triggers hide with delay
   const handleLinkClick = () => {
-    setMenu(false);
-    setClicked(false);
+    setClicked(true); // trigger hide animation
+    setTimeout(() => {
+      setMenu(false);  // close menu after delay
+      setClicked(false);
+    }, 400); // ⏱ adjust delay (ms) to match your transition duration
   };
 
   return (
@@ -22,11 +26,9 @@ export default function Navbar() {
         <div className="hidden md:flex justify-center items-center h-10 w-10 md:h-20 md:w-20 bg-blue-950 text-lime-300 font-bold rounded p-1 md:text-sm text-xs">
           AEI+KDM
         </div>
-        {/* Brand Name and  */}
+        {/* Brand Name */}
         <div className="flex flex-col justify-center leading-tight text-black">
-          <div className="font-bold text-navy text-sm md:text-base">
-            AEI+KDM JV
-          </div>
+          <div className="font-bold text-navy text-sm md:text-base">AEI+KDM JV</div>
           <div className="text-gray-500 text-xs md:text-sm">
             Powering Bangladesh’s Energy Future
           </div>
@@ -66,12 +68,17 @@ export default function Navbar() {
       {/* Mobile Menu */}
       <div
         className={clsx(
-            "absolute list-none top-full right-0 w-50 bg-white flex flex-col items-center border-t border-gray-300/10 gap-1 md:hidden transform origin-top transition-all duration-500 overflow-hidden z-40 rounded-b-lg",
+          "absolute top-full right-0 w-50 bg-white flex flex-col items-center border-t border-gray-500/20 gap-1 md:hidden transform origin-top transition-all duration-500 overflow-hidden z-40 rounded-b-lg list-none",
           {
-              // closed: hidden height, shifted right (so it comes from behind the nav), no pointer events
-              "opacity-0 scale-x-0 translate-x-100 pointer-events-none delay-400": !isOpen,
-              // open: full height, positioned at natural place
-              "opacity-100 scale-x-100 translate-x-0": isOpen && !isClicked,
+            // Closed: hidden with delayed opacity if clicked
+            "opacity-0 scale-x-0 translate-x-100 pointer-events-none transition-delay-[200ms]":
+              !isOpen && isClicked,
+            // Regular close
+            "opacity-0 scale-x-0 translate-x-100 pointer-events-none transition-delay-[0ms]":
+              !isOpen && !isClicked,
+            // Open
+            "opacity-100 scale-x-100 translate-x-0 delay-none":
+              isOpen && !isClicked,
           }
         )}
       >

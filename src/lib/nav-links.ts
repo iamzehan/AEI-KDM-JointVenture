@@ -6,27 +6,32 @@ interface NavLink {
   href: string;
   label: string;
   icon: SvgIconComponent; 
+  iconFilled: SvgIconComponent;
 }
 
 export const links: NavLink[] = [
   {
     label: "Home",
     href: "/",
-    icon: icons.Home,
+    icon: icons.HomeOutlined,
+    iconFilled: icons.Home
   },
   {
     label: "Blog",
     href: "/blogs",
-    icon: icons.Notes,
+    icon: icons.NotesOutlined,
+    iconFilled: icons.Notes
   },
   {
     label: "Projects",
     href: "/projects",
-    icon: icons.Engineering,
+    icon: icons.EngineeringOutlined,
+    iconFilled: icons.Engineering
   },
   {
     label: "About",
     href: "/about",
-    icon: icons.BusinessCenter,
+    icon: icons.BusinessOutlined,
+    iconFilled: icons.Business
   },
 ];

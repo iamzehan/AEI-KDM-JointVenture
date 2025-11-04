@@ -10,7 +10,7 @@ export default function NavLinks({ click }: { click?: () => void }) {
   return (
     <>
       {links.map((link, index) => {
-        const Icon = link.icon;
+        const Icon = (link.href===pathname)?link.iconFilled:link.icon;
 
         return (
           <Link
