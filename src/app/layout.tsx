@@ -32,7 +32,7 @@ export default function RootLayout({
         <header>
           <Navbar/>
         </header>
-        <main>
+        <main  className="md:my-2 md:w-8/10 md:justify-self-center">
           {children}
           <Chat/>
           </main>
