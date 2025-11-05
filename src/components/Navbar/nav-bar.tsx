@@ -22,7 +22,13 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="sticky top-0 z-50 bg-white md:border-b md:border-gray-200 flex justify-between items-center p-2 md:py-4">
+    <nav className="
+    sticky top-0 z-50 
+    bg-white dark:bg-zinc-950 
+    md:shadow-xl/20 dark:shadow-none 
+    flex justify-between 
+    items-center p-2 md:py-4
+    ">
       {/* Brand */}
       <div className="flex items-center gap-2">
         {/* Logo */}
@@ -33,9 +39,9 @@ export default function Navbar() {
         alt="logo"
         />
         {/* Brand Name */}
-        <div className="flex flex-col justify-center leading-tight text-black">
+        <div className="flex flex-col justify-center leading-tight text-black dark:text-white">
           <div className="font-bold text-navy text-xl md:text-base">AEI+KDM JV</div>
-          <div className="text-gray-500 text-xs md:text-sm">
+          <div className="text-gray-500 text-xs dark:text-white md:text-sm">
             Powering Bangladesh’s Energy Future
           </div>
         </div>
@@ -53,19 +59,19 @@ export default function Navbar() {
       >
         <span
           className={clsx(
-            "block h-[2px] w-6 bg-blue-950 rounded transition-transform duration-300 origin-center",
+            "dark:bg-white block h-[2px] w-6 bg-blue-950 rounded transition-transform duration-300 origin-center",
             { "bg-lime-600 rotate-45 translate-y-[6px]": isOpen }
           )}
         />
         <span
           className={clsx(
-            "block h-[2px] w-6 bg-blue-950 rounded transition-opacity duration-300",
+            "dark:bg-white block h-[2px] w-6 bg-blue-950 rounded transition-opacity duration-300",
             { "opacity-0": isOpen }
           )}
         />
         <span
           className={clsx(
-            "block h-[2px] w-6 bg-blue-950 rounded transition-transform duration-300 origin-center",
+            "dark:bg-white block h-[2px] w-6 bg-blue-950 rounded transition-transform duration-300 origin-center",
             { "bg-lime-600 -rotate-45 -translate-y-[6px]": isOpen }
           )}
         />

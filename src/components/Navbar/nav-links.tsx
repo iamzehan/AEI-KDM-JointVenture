@@ -23,7 +23,7 @@ export default function NavLinks({ click }: { click?: () => void }) {
               {
                 "text-lime-600 md:text-blue-600 font-bold bg-lime-200/90 md:bg-blue-300":
                   pathname === link.href,
-                "md:text-blue-950 md:text-shadow-none text-shadow-lg font-bold hover:text-white md:hover:text-lime-600 hover:cursor-pointer":
+                "dark:text-white md:text-blue-950 md:text-shadow-none text-shadow-lg font-bold hover:text-white md:hover:text-lime-600 hover:cursor-pointer":
                   pathname !== link.href,
               },
               {
