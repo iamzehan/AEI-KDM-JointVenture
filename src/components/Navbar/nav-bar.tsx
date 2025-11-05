@@ -25,7 +25,7 @@ export default function Navbar() {
     <nav className="
     sticky top-0 z-50 
     bg-white dark:bg-zinc-950 
-    md:shadow-xl/20 dark:shadow-none 
+    shadow-sm/20 dark:shadow-gray-500 
     flex justify-between 
     items-center p-2 md:py-4
     ">
