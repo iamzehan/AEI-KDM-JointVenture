@@ -1,13 +1,15 @@
 "use client";
 import * as icons from "@mui/icons-material";
 import clsx from "clsx";
+import { usePathname } from "next/navigation";
+
 import { useState } from "react";
 
 export default function Chat() {
   const [isClicked, setClicked] = useState(false);
   const [isGmailHovered, setGmailHovered] = useState(false);
   const [isWhatsAppHovered, setWhatsAppHovered] = useState(false);
-
+  const pathname = usePathname();
   function handleMessageClick() {
     setClicked((prev) => !prev);
     
@@ -27,7 +29,11 @@ export default function Chat() {
   const GmailIcon = icons.Email;
 
   return (
-    <div className="absolute z-50 bottom-15 right-5 flex flex-col gap-2 items-end">
+    <div className={clsx(["absolute z-50 bottom-15 right-5 flex flex-col gap-2 items-end transition-bottom duration-300 ease"], 
+      {
+        ["bottom-20 md:bottom-15"]:pathname==='/'
+      }
+    )}>
       {/* Gmail Button */}
       <div
         className={clsx(
