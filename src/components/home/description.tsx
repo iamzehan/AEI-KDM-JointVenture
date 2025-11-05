@@ -9,7 +9,7 @@ interface Text {
 export default function Description({font}: Text) {
   return (
     <div className="
-    my-10 p-3 md:p-10 flex 
+    p-3 md:p-10 flex 
     flex-col gap-10 
     md:static text-justify 
     h-full w-full bg-gray-500/10 md:shadow-lg md:rounded-lg

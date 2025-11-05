@@ -6,7 +6,7 @@ import Benefits from "@/components/home/benefits";
 import Footer from "@/components/home/Footer";
 export default function Home() {
   return (
-    <div className="flex flex-col gap-4 dark:bg-black">
+    <div className="flex flex-col dark:bg-black">
       {/* Header Images go here */}
       <Header font={tiroBangla} />
       {/* Header Images end */}
