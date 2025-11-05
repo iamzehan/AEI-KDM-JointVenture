@@ -29,7 +29,7 @@ export default function Carousel() {
 
   return (
     <div
-      className="z-10 embla overflow-hidden relative md:bg-transparent md:shadow-lg shadow-lime-600/20"
+      className="z-10 embla overflow-hidden relative md:bg-transparent md:shadow-xl/30 shadow-zinc-600/20"
       ref={emblaRef}
     >
       <div className="flex embla__container">
