@@ -29,7 +29,7 @@ export default function Chat() {
   const GmailIcon = icons.Email;
 
   return (
-    <div className={clsx(["fixed z-50 bottom-15 right-5 flex flex-col gap-2 items-end transition-bottom duration-300 ease"], 
+    <div className={clsx(["text-white fixed z-50 bottom-15 right-5 flex flex-col gap-2 items-end transition-bottom duration-300 ease"], 
       {
         ["bottom-20 md:bottom-15"]:pathname==='/'
       }
