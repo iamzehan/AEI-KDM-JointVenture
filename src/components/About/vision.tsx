@@ -36,7 +36,7 @@ export default function Vision() {
     flex flex-col p-10 md:items-start items-center text-justify gap-3 text-shadow-sm">
       <p
         className="
-      text-2xl font-bold text-justify md:text-3xl 
+      text-2xl font-bold text-center md:text-justify md:text-3xl 
       mb-5 text-blue-950 dark:text-white"
       >
         <EnergyIcon fontSize="large" className="text-lime-600" />
