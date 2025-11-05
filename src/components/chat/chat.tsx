@@ -91,7 +91,7 @@ export default function Chat() {
       {/* Toggle Button */}
       <div
         className={clsx(
-          "z-50 bottom-0 right-0 h-auto w-auto p-3 rounded-full flex justify-center items-center active:scale-95 hover:text-lime-500 transition-color duration-300 ease",
+          "z-50 bottom-0 right-0 h-auto w-auto p-3 rounded-full flex justify-center items-center shadow-sm shadow-lime-500 active:scale-95 hover:text-lime-500 transition-color duration-300 ease",
           {
             "bg-lime-950 text-lime-500 text-shadow-lg shadow-lg shadow-lime-500/20 inset-shadow-sm inset-shadow-lime-500/20":
               isClicked,
