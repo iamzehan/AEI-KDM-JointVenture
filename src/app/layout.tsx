@@ -27,12 +27,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased h-auto`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <header className="sticky top-0 z-50">
+        <header className="sticky top-0 z-50 overflow-x-clip">
           <Navbar />
         </header>
-        <main className="md:my-2 md:w-8/10 md:justify-self-center h-screen flex flex-col">
+        <main className="md:my-2 md:w-4/5 md:mx-auto flex flex-col min-h-screen">
           {children}
           <Chat />
         </main>

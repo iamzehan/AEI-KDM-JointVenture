@@ -4,6 +4,7 @@ import clsx from "clsx";
 import { useState } from "react";
 import Image from 'next/image';
 import favicon from '@/app/favicon.ico'
+import ScrollToTop from "@/lib/scroll-to-top";
 export default function Navbar() {
   const [isOpen, setMenu] = useState(false);
   const [isClicked, setClicked] = useState(false);
@@ -13,6 +14,7 @@ export default function Navbar() {
   // Called when a nav link is clicked: triggers hide with delay
   const handleLinkClick = () => {
     setClicked(true); // trigger hide animation
+    ScrollToTop();
     setTimeout(() => {
       setMenu(false);  // close menu after delay
       setClicked(false);
