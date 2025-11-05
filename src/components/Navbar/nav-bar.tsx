@@ -74,7 +74,7 @@ export default function Navbar() {
       {/* Mobile Menu */}
       <div
         className={clsx(
-          "absolute my-1 top-full right-1 w-50 bg-lime-200/50 border-l-2 border-b-2 border-transparent border-t-none backdrop-blur-lg flex flex-col items-center shadow-lg shadow-gray-950/80 md:hidden transform origin-top transition-all duration-500 overflow-hidden z-40 rounded-lg list-none",
+          "absolute my-1 top-full right-1 w-50 bg-zinc-950/50 border border-transparent border-t-none backdrop-blur-lg flex flex-col items-center inset-shadow-lg shadow-zinc-950/80 md:hidden transform origin-top transition-all duration-500 overflow-hidden z-40 rounded-lg list-none",
           {
             // Closed: hidden with delayed opacity if clicked
             "opacity-0 scale-0 translate-x-100 pointer-events-none transition-delay-[200ms]":

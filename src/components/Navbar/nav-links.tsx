@@ -27,7 +27,7 @@ export default function NavLinks({ click }: { click?: () => void }) {
                   pathname !== link.href,
               },
               {
-                ["border-b border-white md:border-none"]: index<links.length-1 && pathname!==link.href,
+                ["border-b border-zinc-950/60 md:border-none"]: index<links.length-1 && pathname!==link.href,
               }
             )}
           >
