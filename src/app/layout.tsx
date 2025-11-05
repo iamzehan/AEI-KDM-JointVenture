@@ -34,7 +34,7 @@ export default function RootLayout({
         </header>
         <main  className="md:my-2 md:w-8/10 md:justify-self-center h-screen flex flex-col">
           {children}
-          {/* <Chat/> */}
+          <Chat/>
           </main>
       </body>
     </html>

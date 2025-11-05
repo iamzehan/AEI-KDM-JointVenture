@@ -1,5 +1,6 @@
 "use client";
 import clsx from "clsx";
+import QuickNav from "./quick-nav";
 import { description } from "@/lib/header";
 
 interface Text {
@@ -19,6 +20,7 @@ export default function Description({font}: Text) {
       >
         {description.ban}
       </p>
+      <QuickNav/>
     </div>
   );
 }
