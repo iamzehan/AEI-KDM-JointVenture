@@ -15,7 +15,7 @@ export default function Description({font}: Text) {
       <p
         className={clsx(
           [font.className],
-          ["text-xl md:text-white md:text-shadow-lg"]
+          ["text-xl md:text-shadow-lg"]
         )}
       >
         {description.ban}

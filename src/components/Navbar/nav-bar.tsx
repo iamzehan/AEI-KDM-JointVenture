@@ -22,7 +22,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="sticky top-0 z-50 dark:bg-white flex justify-between items-center p-2 md:py-4">
+    <nav className="sticky top-0 z-50 bg-white md:border-b md:border-gray-200 flex justify-between items-center p-2 md:py-4">
       {/* Brand */}
       <div className="flex items-center gap-2">
         {/* Logo */}
@@ -74,7 +74,7 @@ export default function Navbar() {
       {/* Mobile Menu */}
       <div
         className={clsx(
-          "absolute my-1 top-full right-1 w-50 bg-zinc-950/50 border border-transparent backdrop-blur-lg flex flex-col items-center inset-shadow-2xs inset-shadow-zinc-200 md:hidden transform origin-top transition-all duration-500 overflow-hidden z-40 rounded-lg list-none",
+          "absolute my-1 top-full right-1 w-50 bg-zinc-500/50 backdrop-blur-lg flex flex-col items-center shadow-lg md:hidden transform origin-top transition-all duration-500 overflow-hidden z-40 rounded-lg list-none",
           {
             // Closed: hidden with delayed opacity if clicked
             "opacity-0 scale-0 translate-x-100 pointer-events-none transition-delay-[200ms]":
