@@ -1,5 +1,5 @@
 import Header from "@/components/home/Header/header";
-import Description from "@/components/home/Header/description";
+import Description from "@/components/home/description";
 import { tiroBangla } from "@/lib/fonts";
 
 export default function Home() {
