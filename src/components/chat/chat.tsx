@@ -10,6 +10,16 @@ export default function Chat() {
 
   function handleMessageClick() {
     setClicked((prev) => !prev);
+    
+    setTimeout(() => {
+      setGmailHovered(true);
+      setWhatsAppHovered(true);
+    },1000);
+
+    setTimeout(() => {
+      setGmailHovered(false);
+      setWhatsAppHovered(false);
+    }, 2000);
   }
 
   const MessageIcon = isClicked ? icons.Message : icons.MessageOutlined;
@@ -18,7 +28,6 @@ export default function Chat() {
 
   return (
     <div className="absolute z-50 bottom-15 right-5 flex flex-col gap-2 items-end">
-
       {/* Gmail Button */}
       <div
         className={clsx(
@@ -34,10 +43,10 @@ export default function Chat() {
       >
         <span
           className={clsx(
-            "w-[75px] overflow-hidden transition-all transition-width duration-500 ease-in-out origin-right transform whitespace-nowrap",
+            "overflow-hidden transition-all transition-width duration-500 ease-in-out origin-right transform whitespace-nowrap",
             {
-              "md:w-[90px] md:opacity-100 md:scale-100 ml-2": isGmailHovered,
-              "md:w-0 md:opacity-0 md:scale-0": !isGmailHovered,
+              "w-[90px] opacity-100 scale-100": isGmailHovered,
+              "w-0 md:opacity-0 scale-0": !isGmailHovered,
             }
           )}
         >
@@ -63,8 +72,8 @@ export default function Chat() {
           className={clsx(
             "overflow-hidden transition-all transition-width duration-500 ease-in-out origin-right transform whitespace-nowrap",
             {
-              "md:w-[90px] md:opacity-100 md:scale-100 ml-2": isWhatsAppHovered,
-              "md:w-0 md:opacity-0 md:scale-0": !isWhatsAppHovered,
+              "w-[90px] opacity-100 scale-100": isWhatsAppHovered,
+              "w-0 opacity-0 scale-0": !isWhatsAppHovered,
             }
           )}
         >
