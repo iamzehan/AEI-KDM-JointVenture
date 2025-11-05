@@ -29,7 +29,7 @@ export default function Chat() {
   const GmailIcon = icons.Email;
 
   return (
-    <div className={clsx(["text-white fixed z-50 bottom-15 right-5 flex flex-col gap-2 items-end transition-bottom duration-300 ease"], 
+    <div className={clsx(["text-white overflow-x-clip sticky z-50 bottom-15 right-5 mx-5 flex flex-col gap-2 items-end transition-bottom duration-300 ease"], 
       {
         ["bottom-20 md:bottom-15"]:pathname==='/'
       }
@@ -37,63 +37,69 @@ export default function Chat() {
       {/* Gmail Button */}
       <div
         className={clsx(
-          "mx-1 h-auto w-auto p-2 rounded-full flex justify-center origin-right md:origin-bottom items-center transition-all duration-300 ease",
+          "border border-red-400 h-auto w-auto p-2 rounded-full flex justify-center origin-right md:origin-bottom items-center transition-all duration-300 ease",
           {
             "opacity-100 scale-100 bg-red-400 hover:shadow-lg hover:shadow-red-400/20 hover:transition-shadow hover:duration-500 ease":
               isClicked,
           },
-          { "z-30 md:absolute opacity-0 scale-0": !isClicked }
+          { "z-30 md:absolute opacity-0 scale-0": !isClicked },
+          {
+            "backdrop-blur-lg bg-transparent text-red-400 border-1 border-red-400/10":isGmailHovered
+          }
         )}
         onMouseEnter={() => setGmailHovered(true)}
         onMouseLeave={() => setGmailHovered(false)}
       >
-        <span
+        <div
           className={clsx(
-            "overflow-hidden transition-all transition-width duration-500 ease-in-out origin-right transform whitespace-nowrap",
+            "font-bold overflow-hidden transition-all transition-width duration-500 ease-in-out origin-right transform whitespace-nowrap",
             {
-              "w-[90px] opacity-100 scale-100": isGmailHovered,
-              "w-0 md:opacity-0 scale-0": !isGmailHovered,
+              "w-[90px] opacity-100 scale-x-100": isGmailHovered,
+              "w-0 md:opacity-0 scale-x-0": !isGmailHovered,
             }
           )}
         >
           Gmail
-        </span>
+        </div>
         <GmailIcon fontSize="large" />
       </div>
 
       {/* WhatsApp Button */}
       <div
         className={clsx(
-          "mx-1 h-auto w-auto flex items-center justify-center rounded-full p-2 origin-right transition-all duration-300 ease-in-out",
+          "border border-green-400 h-auto w-auto flex items-center content-center rounded-full p-2 origin-right transition-all duration-300 ease-in-out",
           {
             "opacity-100 scale-100 bg-green-400 md:origin-bottom shadow-md hover:shadow-lg hover:shadow-green-400/20":
               isClicked,
           },
-          { "z-40 md:absolute opacity-0 scale-0": !isClicked }
+          { "z-40 md:absolute opacity-0 scale-0": !isClicked },
+          {
+            "backdrop-blur-lg bg-transparent text-green-400 border-1 border-green-400/10":isWhatsAppHovered
+          }
         )}
         onMouseEnter={() => setWhatsAppHovered(true)}
         onMouseLeave={() => setWhatsAppHovered(false)}
       >
-        <span
+        <div
           className={clsx(
-            "overflow-hidden transition-all transition-width duration-500 ease-in-out origin-right transform whitespace-nowrap",
+            "font-bold overflow-hidden transition-all transition-width duration-500 ease-in-out origin-right transform whitespace-nowrap",
             {
-              "w-[90px] opacity-100 scale-100": isWhatsAppHovered,
-              "w-0 opacity-0 scale-0": !isWhatsAppHovered,
+              "w-[90px] opacity-100 scale-x-100": isWhatsAppHovered,
+              "w-0 opacity-0 scale-x-0": !isWhatsAppHovered,
             }
           )}
         >
           Whatsapp
-        </span>
+        </div>
         <WhatsAppIcon fontSize="large" />
       </div>
 
       {/* Toggle Button */}
       <div
         className={clsx(
-          "z-50 bottom-0 right-0 h-auto w-auto p-3 rounded-full flex justify-center items-center dark:border-0 border-t-1 border-l-1 border-r-1 border-gray-500/20 shadow-lg/20 shadow-gray-500 active:scale-95 hover:text-lime-500 transition-color duration-300 ease",
+          "backdrop-blur-xs z-50 bottom-0 right-0 h-auto w-auto p-3 rounded-full flex justify-center items-center dark:border-0 border-t-1 border-l-1 border-r-1 border-gray-500/20 shadow-lg/20 shadow-gray-500 active:scale-95 hover:text-lime-500 transition-color duration-300 ease",
           {
-            "bg-lime-950 text-lime-500 text-shadow-lg shadow-lg shadow-lime-500/20 inset-shadow-sm inset-shadow-lime-500/20":
+            "bg-lime-950/50 dark:text-lime-500 text-shadow-lg shadow-lg shadow-lime-500/20 inset-shadow-sm inset-shadow-lime-500/20":
               isClicked,
           },
           { "bg-white text-blue-950": !isClicked }

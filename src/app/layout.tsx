@@ -34,8 +34,8 @@ export default function RootLayout({
         </header>
         <main className="md:my-2 md:w-4/5 md:mx-auto flex flex-col min-h-screen">
           {children}
-          <Chat />
         </main>
+        <Chat />
       </body>
     </html>
   );
