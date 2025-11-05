@@ -1,5 +1,24 @@
 "use client";
-import { cards } from "@/lib/Cards";
+
+interface Card{
+    title: string;
+    subtitle: string;
+}
+
+export const data:Card[] = [
+    {
+        title: "500,000",
+        subtitle: "MT Storage Capacity"
+    },
+    {
+        title: "150 acres",
+        subtitle: "Prime Moheshkhali Land"
+    },
+    {
+        title: "Deep-water",
+        subtitle: "VLGC-capable Jetty"
+    }
+]
 
 export default function Cards() {
   return (
@@ -9,7 +28,7 @@ export default function Cards() {
     items-center justify-center py-10
     // others 
     md:px-15 md:py-25 md:gap-5 md:flex-row">
-      {cards.map((card, index) => {
+      {data.map((card, index) => {
         return (
           <span key={index} className="
           w-8/10 md:w-fit

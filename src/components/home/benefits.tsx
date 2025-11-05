@@ -1,5 +1,10 @@
 "use client";
-import { benefits } from "@/lib/benefits";
+
+const data:string[] = [
+    "Secure and reliable LPG supply — fewer shortages, predictable prices.",
+    "Affordable energy via bulk imports and efficient logistics.",
+    "Cleaner energy option with a lower carbon footprint"
+]
 export default function Benefits() {
   return (
     <div className="
@@ -8,7 +13,7 @@ export default function Benefits() {
     ">
       <span className="font-bold text-xl">Key benefits</span>
       <ul className="list-disc ml-5">
-        {benefits.map((benefit, index) => {
+        {data.map((benefit, index) => {
           return (<li key={index}>{benefit}</li>)
         })}
       </ul>
