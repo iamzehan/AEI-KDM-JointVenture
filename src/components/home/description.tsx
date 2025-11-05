@@ -9,13 +9,11 @@ interface Text {
 export default function Description({font}: Text) {
   return (
     <div className="
-    my-10 p-5 flex 
+    my-10 p-3 md:p-10 flex 
     flex-col gap-10 
     md:static text-justify 
-    self-center
-    rounded-lg
-    border-1 border-zinc-300/20
-    h-full w-9/10
+    h-full w-full
+    border-b border-t border-zinc-950
     ">
       <p className="text-xl md:text-shadow-lg font-bold">
         {description.eng}
