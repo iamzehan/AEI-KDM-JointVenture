@@ -8,7 +8,7 @@ export default function QuickNav() {
 
   return (
     <div
-      className="z-50 sticky py-6 px-5 
+      className="z-40 sticky py-6 px-5 
         rounded-full
         bottom-0 top-auto dark:bg-zinc-950/80 
         backdrop-blur-xs flex justify-between 
