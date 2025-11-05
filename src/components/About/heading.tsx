@@ -47,7 +47,7 @@ export default function Heading() {
       <span className='text-white self-center rounded-full p-3 bg-red-400'>
         <AboutIcon fontSize="large"/>
       </span>
-      <p className="text-center text-blue-950 dark:text-white font-bold text-xl md:text-2xl">
+      <p className="text-center text-blue-950 dark:text-white font-extrabold text-2xl md:text-3xl">
         {data.title}
       </p>
       <p className="text-gray-500 dark:text-white">{data.description}</p>
