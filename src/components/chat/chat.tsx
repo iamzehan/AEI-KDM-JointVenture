@@ -14,10 +14,10 @@ export default function Chat() {
 
   const MessageIcon = isClicked ? icons.Message : icons.MessageOutlined;
   const WhatsAppIcon = icons.WhatsApp;
-  const GmailIcon = icons.OutgoingMail;
+  const GmailIcon = icons.Email;
 
   return (
-    <div className="absolute bottom-15 right-5 flex flex-col gap-2 items-end">
+    <div className="absolute z-50 bottom-15 right-5 flex flex-col gap-2 items-end">
 
       {/* Gmail Button */}
       <div
