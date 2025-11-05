@@ -34,26 +34,35 @@ export default function Heading() {
   const data: Content = heading.data;
   return (
     <div
-      className="flex flex-col gap-3 
+      className="
+    bg-white dark:bg-transparent
+    flex flex-col gap-3
     p-10 
-    border-1 border-gray-500/10
+    border-1 border-gray-500/10 dark:border-r-0 dark:border-l-0
     md:shadow-sm/10 
-    md:rounded-lg text-justify"
+    md:rounded-lg dark:rounded-none text-justify"
     >
-      <p className="text-blue-950 dark:text-white font-bold text-xl md:text-2xl">
+      <p className="text-center text-blue-950 dark:text-white font-bold text-xl md:text-2xl">
         {data.title}
       </p>
       <p className="text-gray-500 dark:text-white">{data.description}</p>
-      <p className="text-xl font-bold text-blue-950 dark:text-white">Why choose us?</p>
-      <ul className="list-disc px-10">{data.list_of_why.map((item, idx)=>{
-        return (
-          <li key={idx}>
-            <strong className="text-blue-950 dark:text-gray-500">{item.title}: </strong> 
-            <text className="text-gray-500 dark:text-white">{item.description}</text>
-          </li>
-        );
-      }
-      )}</ul>
+      <p className="text-xl font-bold text-blue-950 dark:text-white">
+        Why choose us?
+      </p>
+      <ul className="list-disc px-5 md:px-10 text-sm md:text-sm">
+        {data.list_of_why.map((item, idx) => {
+          return (
+            <li key={idx}>
+              <strong className="text-blue-950 dark:text-gray-500">
+                {item.title}:{"\t"}
+              </strong>
+              <span className="text-gray-500 dark:text-white">
+                {item.description}
+              </span>
+            </li>
+          );
+        })}
+      </ul>
     </div>
   );
 }

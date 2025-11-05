@@ -5,10 +5,10 @@ import Vision from "./vision";
 
 export default function About() {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col md:flex-row md:flex-wrap">
       <Heading />
-      <Commitments />
       <Vision />
+      <Commitments />
     </div>
   );
 }
