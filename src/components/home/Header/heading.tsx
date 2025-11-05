@@ -1,7 +1,7 @@
 'use client'
 
 import clsx from "clsx";
-import { text } from "@/components/home/data";
+import { text } from "@/components/Home/data";
 
 export default function Heading({font}: {font:{className:string}}) {
   

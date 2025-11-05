@@ -1,9 +1,9 @@
-import Header from "@/components/home/Header/header";
-import Description from "@/components/home/description";
+import Header from "@/components/Home/Header/header";
+import Description from "@/components/Home/description";
 import { tiroBangla } from "@/lib/fonts";
-import Cards from "@/components/home/Cards";
-import Benefits from "@/components/home/benefits";
-import Footer from "@/components/home/Footer";
+import Cards from "@/components/Home/Cards";
+import Benefits from "@/components/Home/benefits";
+import Footer from "@/components/Home/Footer";
 export default function Home() {
   return (
     <div className="flex flex-col dark:bg-black">

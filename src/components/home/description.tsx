@@ -1,7 +1,7 @@
 "use client";
 import clsx from "clsx";
 import QuickNav from "./quick-nav";
-import { description } from "@/components/home/data";
+import { description } from "@/components/Home/data";
 
 interface Text {
   font:{className: string;}
