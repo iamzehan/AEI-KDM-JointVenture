@@ -29,7 +29,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased h-auto`}
       >
-        <header>
+        <header className="sticky top-0 z-50">
           <Navbar />
         </header>
         <main className="md:my-2 md:w-8/10 md:justify-self-center h-screen flex flex-col">
