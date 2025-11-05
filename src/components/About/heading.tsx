@@ -1,5 +1,5 @@
 "use client";
-
+import * as icon from '@mui/icons-material'
 interface Content {
   title: string;
   description: string;
@@ -32,16 +32,21 @@ const heading: { data: Content } = {
 };
 export default function Heading() {
   const data: Content = heading.data;
+  const AboutIcon = icon.Business;
   return (
     <div
       className="
+    w-full
     bg-white dark:bg-transparent
     flex flex-col gap-3
     p-10 
     border-1 border-gray-500/10 dark:border-r-0 dark:border-l-0
-    md:shadow-sm/10 
-    md:rounded-lg dark:rounded-none text-justify"
+    md:shadow-sm/10 md:rounded-t-4xl
+    dark:rounded-none text-justify"
     >
+      <span className='text-white self-center rounded-full p-3 bg-red-400'>
+        <AboutIcon fontSize="large"/>
+      </span>
       <p className="text-center text-blue-950 dark:text-white font-bold text-xl md:text-2xl">
         {data.title}
       </p>

@@ -1,6 +1,5 @@
 "use client";
 import * as icon from "@mui/icons-material";
-import clsx from "clsx";
 
 const icons:{[index:string]:icon.SvgIconComponent} = {
   "Security": icon.Security,
@@ -42,7 +41,7 @@ export default function Commitments() {
       className="
     flex flex-col gap-5
     px-10 py-15 w-full 
-    border-1 md:rounded-lg border-gray-500/10 dark:border-x-0 dark:rounded-none
+    border-1 md:rounded-b-4xl border-gray-500/10 dark:border-x-0 dark:rounded-none
     shadow-sm shadow-gray-500/10 dark:shadow-none
     bg-white dark:bg-transparent
     "

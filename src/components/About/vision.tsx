@@ -32,6 +32,7 @@ export default function Vision() {
   const PropaneIcon = icon.PropaneTank;
   return (
     <div className="
+    w-full border-x-1 border-gray-500/10 md:shadow-xl/10
     flex flex-col p-10 md:items-start items-center text-justify gap-3 text-shadow-sm">
       <p
         className="
