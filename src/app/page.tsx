@@ -3,7 +3,7 @@ import Description from "@/components/home/description";
 import { tiroBangla } from "@/lib/fonts";
 import Cards from "@/components/home/Cards";
 import Benefits from "@/components/home/benefits";
-
+import Footer from "@/components/home/Footer";
 export default function Home() {
   return (
     <div className="flex flex-col gap-4 dark:bg-black">
@@ -17,9 +17,15 @@ export default function Home() {
 
       {/* Cards go here */}
       <Cards />
-      {/* Cards end here */}
-      <Benefits/>
+      {/* Cards end */}
+      
       {/* Benefits go here */}
+      <Benefits />
+      {/* Benefits end */}
+      
+      {/* footer goes here */}
+      <Footer/>
+      {/* footer end */}
     </div>
   );
 }
