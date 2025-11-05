@@ -2,8 +2,12 @@
 import { benefits } from "@/lib/benefits";
 export default function Benefits() {
   return (
-    <div>
-      <ul>
+    <div className="
+    w-full p-10 flex flex-col justify-center
+    gap-2 bg-gray-500/10 text-gray-500 rounded-lg
+    ">
+      <span className="font-bold text-xl">Key benefits</span>
+      <ul className="list-disc ml-5">
         {benefits.map((benefit, index) => {
           return (<li key={index}>{benefit}</li>)
         })}

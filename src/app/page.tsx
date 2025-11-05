@@ -2,6 +2,7 @@ import Header from "@/components/home/Header/header";
 import Description from "@/components/home/description";
 import { tiroBangla } from "@/lib/fonts";
 import Cards from "@/components/home/Cards";
+import Benefits from "@/components/home/benefits";
 
 export default function Home() {
   return (
@@ -17,6 +18,8 @@ export default function Home() {
       {/* Cards go here */}
       <Cards />
       {/* Cards end here */}
+      <Benefits/>
+      {/* Benefits go here */}
     </div>
   );
 }
