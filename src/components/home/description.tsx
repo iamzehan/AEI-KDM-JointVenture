@@ -12,8 +12,7 @@ export default function Description({font}: Text) {
     my-10 p-3 md:p-10 flex 
     flex-col gap-10 
     md:static text-justify 
-    h-full w-full
-    border-b border-t border-zinc-950
+    h-full w-full bg-gray-500/10 shadow-lg rounded-lg
     ">
       <p className="text-xl md:text-shadow-lg font-bold">
         {description.eng}
