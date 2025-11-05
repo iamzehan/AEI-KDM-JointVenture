@@ -11,16 +11,16 @@ export default function Description({font}: Text) {
     <div className="
     p-3 md:p-10 flex 
     flex-col gap-10 
-    md:static text-justify 
+    md:static text-justify md:text-xl 
     h-full w-full bg-gray-500/10 md:shadow-lg md:rounded-lg
     ">
-      <p className="text-xl md:text-shadow-lg font-bold">
+      <p className="md:text-shadow-lg font-bold">
         {description.eng}
       </p>
       <p
         className={clsx(
           [font.className],
-          ["text-xl md:text-shadow-lg"]
+          ["md:text-shadow-lg"]
         )}
       >
         {description.ban}
