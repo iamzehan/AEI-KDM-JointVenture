@@ -5,12 +5,14 @@ export default function Cards() {
   return (
     <div className="
     // mobile
-    p-2 flex flex-col flex-grow gap-3 w-8/10
+    p-2 flex flex-col flex-grow gap-3 w-full
+    items-center justify-center
     // others 
-    md:p-5 md:gap-5 md:flex-row self-center justify-center">
+    md:p-5 md:gap-5 md:flex-row">
       {cards.map((card, index) => {
         return (
           <span key={index} className="
+          w-8/10
           text-blue-950 dark:text-white
           hover:cursor-pointer
           hover:text-lime-600
