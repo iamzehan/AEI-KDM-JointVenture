@@ -1,6 +1,11 @@
 "use client";
+import ScrollToTop from "@/lib/scroll-to-top";
 import Link from "next/link";
 export default function QuickNav() {
+  const handleLinkClick = () => {
+    ScrollToTop();
+  };
+
   return (
     <div
       className="z-50 sticky py-6 px-5 
@@ -10,7 +15,7 @@ export default function QuickNav() {
         self-center gap-5
         "
     >
-      <Link href="/projects">
+      <Link href="/projects" onClick={handleLinkClick}>
         <span
           className="transition-color
         duration-500 
@@ -23,9 +28,9 @@ export default function QuickNav() {
           Explore Projects
         </span>
       </Link>
-      <Link href="#">
+      <Link href="#" onClick={handleLinkClick}>
         <span
-        className="bg-lime-600
+          className="bg-lime-600
         px-5 py-2 
         rounded
         hover:bg-zinc-950
