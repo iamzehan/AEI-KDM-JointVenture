@@ -11,7 +11,7 @@ export default function Cards() {
       {cards.map((card, index) => {
         return (
           <span key={index} className="
-          text-blue-950
+          text-blue-950 dark:text-white
           hover:cursor-pointer
           hover:text-lime-600
           p-5 rounded-lg shadow-lg/20 shadow-zinc-300
