@@ -10,22 +10,23 @@ export default function Home() {
       {/* Header Images go here */}
       <Header font={tiroBangla} />
       {/* Header Images end */}
+      <div className="flex flex-col md:py-10 md:px-5">
+        {/* Description go here */}
+        <Description font={tiroBangla} />
+        {/* Description end */}
 
-      {/* Description go here */}
-      <Description font={tiroBangla} />
-      {/* Description end */}
+        {/* Cards go here */}
+        <Cards />
+        {/* Cards end */}
 
-      {/* Cards go here */}
-      <Cards />
-      {/* Cards end */}
-      
-      {/* Benefits go here */}
-      <Benefits />
-      {/* Benefits end */}
-      
-      {/* footer goes here */}
-      <Footer/>
-      {/* footer end */}
+        {/* Benefits go here */}
+        <Benefits />
+        {/* Benefits end */}
+
+        {/* footer goes here */}
+        <Footer />
+        {/* footer end */}
+      </div>
     </div>
   );
 }
