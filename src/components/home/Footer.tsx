@@ -8,7 +8,7 @@ export default function Footer(){
     return (
         <div className="
         flex flex-col gap-3 px-5 py-10
-        content-left shadow-lg
+        content-left
         ">
             <p className="text-2xl font-bold">{data.header}</p>
             <p className="text-justify">{data.description}</p>

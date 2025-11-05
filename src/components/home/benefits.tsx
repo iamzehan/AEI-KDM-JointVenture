@@ -3,7 +3,7 @@ import { benefits } from "@/lib/benefits";
 export default function Benefits() {
   return (
     <div className="
-    w-full p-10 flex flex-col justify-center
+    w-full p-10 flex flex-col justify-center text-shadow-sm
     gap-2 bg-gray-500/10 text-gray-500 md:rounded-lg md:shadow-lg
     ">
       <span className="font-bold text-xl">Key benefits</span>
