@@ -10,7 +10,7 @@ export default function NavLinks({ click }: { click?: () => void }) {
   return (
     <>
       {links.map((link, index) => {
-        const Icon = (link.href===pathname)?link.iconFilled:link.icon;
+        const Icon = link.href === pathname ? link.iconFilled : link.icon;
 
         return (
           <Link
@@ -19,16 +19,20 @@ export default function NavLinks({ click }: { click?: () => void }) {
             prefetch={true}
             onClick={() => click?.()}
             className={clsx(
-              "w-full px-10 md:px-2 py-2 md:rounded transition-colors duration-300 flex gap-4 md:gap-2 items-center justify-between md:justify-center",
+              "h-full w-full px-10 md:px-2 py-2 md:rounded transition-colors duration-300 flex gap-4 md:gap-2 items-center justify-between md:justify-center",
               {
-                "text-blue-600 font-bold bg-blue-300": pathname === link.href,
-                "text-blue-950 font-bold hover:text-lime-600 hover:cursor-pointer":
+                "text-lime-600 md:text-blue-600 font-bold bg-lime-200/90 md:bg-blue-300":
+                  pathname === link.href,
+                "md:text-blue-950 md:text-shadow-none text-shadow-lg font-bold hover:text-white md:hover:text-lime-600 hover:cursor-pointer":
                   pathname !== link.href,
+              },
+              {
+                ["border-b border-white md:border-none"]: index<links.length-1 && pathname!==link.href,
               }
             )}
           >
-            <Icon fontSize="small" />
-            <span className="w-full">{link.label}</span>
+            <Icon fontSize="small" className="text-shadow-md"/>
+            <span className="w-full ">{link.label}</span>
           </Link>
         );
       })}

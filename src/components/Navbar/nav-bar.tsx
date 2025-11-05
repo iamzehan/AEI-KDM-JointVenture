@@ -19,7 +19,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="sticky top-0 z-50 dark:bg-white flex justify-between items-center p-2 md:p-4">
+    <nav className="sticky top-0 z-50 dark:bg-white flex justify-between items-center p-2 md:py-4 md:px-40">
       {/* Brand */}
       <div className="flex items-center gap-2">
         {/* Logo */}
@@ -68,16 +68,16 @@ export default function Navbar() {
       {/* Mobile Menu */}
       <div
         className={clsx(
-          "absolute top-full right-0 w-50 bg-white flex flex-col items-center border-t border-gray-500/20 gap-1 md:hidden transform origin-top transition-all duration-500 overflow-hidden z-40 rounded-b-lg list-none",
+          "absolute my-1 top-full right-1 w-50 bg-lime-200/50 border-l-2 border-b-2 border-transparent border-t-none backdrop-blur-lg flex flex-col items-center shadow-lg shadow-gray-950/80 md:hidden transform origin-top transition-all duration-500 overflow-hidden z-40 rounded-lg list-none",
           {
             // Closed: hidden with delayed opacity if clicked
-            "opacity-0 scale-x-0 translate-x-100 pointer-events-none transition-delay-[200ms]":
+            "opacity-0 scale-0 translate-x-100 pointer-events-none transition-delay-[200ms]":
               !isOpen && isClicked,
             // Regular close
-            "opacity-0 scale-x-0 translate-x-100 pointer-events-none transition-delay-[0ms]":
+            "opacity-0 scale-0 translate-x-100 pointer-events-none transition-delay-[0ms]":
               !isOpen && !isClicked,
             // Open
-            "opacity-100 scale-x-100 translate-x-0 delay-none":
+            "opacity-100 scale-100 translate-y-0 delay-none":
               isOpen && !isClicked,
           }
         )}
