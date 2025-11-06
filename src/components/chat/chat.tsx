@@ -12,11 +12,11 @@ export default function Chat() {
   const pathname = usePathname();
   function handleMessageClick() {
     setClicked((prev) => !prev);
-    
+
     setTimeout(() => {
       setGmailHovered(true);
       setWhatsAppHovered(true);
-    },1000);
+    }, 1000);
 
     setTimeout(() => {
       setGmailHovered(false);
@@ -29,11 +29,16 @@ export default function Chat() {
   const GmailIcon = icons.Email;
 
   return (
-    <div className={clsx(["text-white overflow-x-clip sticky z-50 bottom-15 right-5 mx-5 flex flex-col gap-2 items-end transition-bottom duration-300 ease"], 
-      {
-        ["bottom-20 md:bottom-15"]:pathname==='/'
-      }
-    )}>
+    <div
+      className={clsx(
+        [
+          "text-white overflow-x-clip sticky z-50 bottom-15 right-5 mx-5 flex flex-col gap-2 items-end transition-bottom duration-300 ease",
+        ],
+        {
+          ["bottom-20 md:bottom-15"]: pathname === "/",
+        }
+      )}
+    >
       {/* Gmail Button */}
       <div
         className={clsx(
@@ -44,7 +49,8 @@ export default function Chat() {
           },
           { "z-30 md:absolute opacity-0 scale-0": !isClicked },
           {
-            "backdrop-blur-lg dark:bg-transparent bg-zinc-400/10 text-red-400 border-1 border-red-400/10":isGmailHovered
+            "backdrop-blur-lg dark:bg-transparent bg-zinc-400/10 text-red-400 border-1 border-red-400/10":
+              isGmailHovered,
           }
         )}
         onMouseEnter={() => setGmailHovered(true)}
@@ -74,7 +80,8 @@ export default function Chat() {
           },
           { "z-40 md:absolute opacity-0 scale-0": !isClicked },
           {
-            "backdrop-blur-lg bg-transparent text-green-400 border-1 border-green-400/10":isWhatsAppHovered
+            "backdrop-blur-lg bg-transparent text-green-400 border-1 border-green-400/10":
+              isWhatsAppHovered,
           }
         )}
         onMouseEnter={() => setWhatsAppHovered(true)}
