@@ -37,14 +37,14 @@ export default function Chat() {
       {/* Gmail Button */}
       <div
         className={clsx(
-          "border border-red-400 h-auto w-auto p-2 rounded-full flex justify-center origin-right md:origin-bottom items-center transition-all duration-300 ease",
+          "border border-red-400 h-auto w-auto p-2 rounded-full flex justify-center origin-right md:origin-bottom items-center transition-all duration-300 ease text-shadow-lg",
           {
             "opacity-100 scale-100 bg-red-400 hover:shadow-lg hover:shadow-red-400/20 hover:transition-shadow hover:duration-500 ease":
               isClicked,
           },
           { "z-30 md:absolute opacity-0 scale-0": !isClicked },
           {
-            "backdrop-blur-lg bg-transparent text-red-400 border-1 border-red-400/10":isGmailHovered
+            "backdrop-blur-lg dark:bg-transparent bg-zinc-400/10 text-red-400 border-1 border-red-400/10":isGmailHovered
           }
         )}
         onMouseEnter={() => setGmailHovered(true)}
@@ -67,7 +67,7 @@ export default function Chat() {
       {/* WhatsApp Button */}
       <div
         className={clsx(
-          "border border-green-400 h-auto w-auto flex items-center content-center rounded-full p-2 origin-right transition-all duration-300 ease-in-out",
+          "border border-green-400 h-auto w-auto flex items-center content-center rounded-full p-2 origin-right transition-all duration-300 ease-in-out text-shadow-lg",
           {
             "opacity-100 scale-100 bg-green-400 md:origin-bottom shadow-md hover:shadow-lg hover:shadow-green-400/20":
               isClicked,
