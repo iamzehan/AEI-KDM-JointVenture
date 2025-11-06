@@ -61,7 +61,7 @@ export default function Chat() {
         >
           Gmail
         </div>
-        <GmailIcon fontSize="large" />
+        <GmailIcon fontSize="large" className="drop-shadow-lg/50" />
       </div>
 
       {/* WhatsApp Button */}
@@ -91,7 +91,7 @@ export default function Chat() {
         >
           Whatsapp
         </div>
-        <WhatsAppIcon fontSize="large" />
+        <WhatsAppIcon fontSize="large" className="drop-shadow-lg/50" />
       </div>
 
       {/* Toggle Button */}
