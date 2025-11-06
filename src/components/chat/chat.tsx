@@ -97,16 +97,16 @@ export default function Chat() {
       {/* Toggle Button */}
       <div
         className={clsx(
-          "backdrop-blur-xs z-50 bottom-0 right-0 h-auto w-auto p-3 rounded-full flex justify-center items-center dark:border-0 border-t-1 border-l-1 border-r-1 border-gray-500/20 shadow-lg/20 shadow-gray-500 active:scale-95 hover:text-lime-500 transition-color duration-300 ease",
+          "z-50 bottom-0 right-0 h-auto w-auto p-3 rounded-full flex justify-center items-center dark:border-0 border-t-1 border-l-1 border-r-1 border-gray-500/20 shadow-lg/20 shadow-gray-500 active:scale-95 hover:text-lime-300 transition-color duration-300 ease",
           {
-            "bg-lime-950/50 dark:text-lime-500 text-shadow-lg shadow-lg shadow-lime-500/20 inset-shadow-sm inset-shadow-lime-500/20":
+            "bg-green-700 dark:text-green-200 text-shadow-lg shadow-lg shadow-lime-500/20 inset-shadow-sm inset-shadow-lime-500/20":
               isClicked,
           },
-          { "bg-white text-blue-950": !isClicked }
+          { "bg-lime-500 text-white": !isClicked }
         )}
         onClick={handleMessageClick}
       >
-        <MessageIcon fontSize="large" />
+        <MessageIcon fontSize="large" className="drop-shadow-lg/50" />
       </div>
     </div>
   );
