@@ -59,7 +59,7 @@ export default function Commitments() {
             flex flex-col content-center items-center text-center
             rounded-lg border-t border-gray-500/10 shadow-md/10 dark:shadow-green-500">
               <span className="flex flex-col content-center items-center p-3 rounded-full h-auto w-auto">
-                <Icon fontSize="large" className="text-green-500"/>
+                <Icon fontSize="large" className="text-green-500 drop-shadow-sm dark:drop-shadow-lg dark:drop-shadow-green-500"/> 
               </span>
               <p className="text-blue-950 dark:text-white md:text-xl font-bold">{commitment.title}</p>
               <p className="text-sm text-gray-500 dark:text-white">{commitment.description}</p>
