@@ -1,9 +1,11 @@
 "use client";
+import Brand from './brand';
+import Favicon from "./favicon";
+import MobileMenu from "./mobile-menu";
 import NavLinks from "./nav-links";
-import clsx from "clsx";
 import { useState } from "react";
-import Image from 'next/image';
-import favicon from '@/app/favicon.ico'
+
+
 import ScrollToTop from "@/lib/scroll-to-top";
 
 import HamburgerMenu from "./hamburger-menu";
@@ -35,19 +37,9 @@ export default function Navbar() {
       {/* Brand */}
       <div className="flex items-center gap-2">
         {/* Logo */}
-        <Image
-        src={favicon}
-        height={50}
-        width={50}
-        alt="logo"
-        />
+        <Favicon/>
         {/* Brand Name */}
-        <div className="flex flex-col justify-center leading-tight text-black dark:text-white">
-          <div className="font-extrabold text-navy text-xl md:text-base">AEI+KDM JV</div>
-          <div className="text-gray-500 text-xs dark:text-white md:text-sm">
-            Powering Bangladesh’s Energy Future
-          </div>
-        </div>
+        <Brand/>
       </div>
 
       {/* Desktop Links */}
@@ -57,27 +49,8 @@ export default function Navbar() {
 
       {/* Mobile Burger Button */}
       <HamburgerMenu isOpen={isOpen} handleMenu={handleMenu}/>
-      
       {/* Mobile Menu */}
-
-      <div
-        className={clsx(
-          "absolute my-1 top-full right-1 w-50 bg-zinc-500/50 backdrop-blur-lg flex flex-col items-center shadow-lg md:hidden transform origin-top-right transition-all duration-500 overflow-hidden z-40 rounded-lg list-none",
-          {
-            // Closed: hidden with delayed opacity if clicked
-            "opacity-0 scale-0 pointer-events-none transition-delay-[200ms]":
-              !isOpen && isClicked,
-            // Regular close
-            "opacity-0 scale-0 pointer-events-none transition-delay-[0ms]":
-              !isOpen && !isClicked,
-            // Open
-            "opacity-100 scale-100 translate-y-0 delay-none":
-              isOpen && !isClicked,
-          }
-        )}
-      >
-        <NavLinks click={handleLinkClick} />
-      </div>
+      <MobileMenu handleLinkClick={handleLinkClick} isOpen={isOpen} isClicked={isClicked}/>
     </nav>
   );
 }

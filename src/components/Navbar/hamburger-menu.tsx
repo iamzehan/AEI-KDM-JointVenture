@@ -1,7 +1,5 @@
 "use client";
 import clsx from 'clsx';
-import React from 'react';
-
 
 export default function HamburgerMenu({handleMenu, isOpen}:{handleMenu?:()=>void, isOpen:boolean}) {
   return (
