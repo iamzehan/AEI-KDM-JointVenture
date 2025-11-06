@@ -31,7 +31,7 @@ export default function NavLinks({ click }: { click?: () => void }) {
               }
             )}
           >
-            <Icon fontSize="small" className={clsx(["drop-shadow-sm/50 transition-all duration-300"], {
+            <Icon fontSize="small" className={clsx(["drop-shadow-sm/50 md:drop-shadow-none transition-all duration-300"], {
               ["scale-110"]:pathname===link.href
             })}/>
             <span className="w-full ">{link.label}</span>
