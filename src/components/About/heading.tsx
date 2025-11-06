@@ -45,7 +45,7 @@ export default function Heading() {
     dark:rounded-none text-justify"
     >
       <span className='text-white self-center rounded-full p-3 bg-red-400'>
-        <AboutIcon fontSize="large"/>
+        <AboutIcon fontSize="large" className='drop-shadow-sm/50'/>
       </span>
       <p className="text-center text-blue-950 dark:text-white font-extrabold text-2xl md:text-3xl">
         {data.title}
