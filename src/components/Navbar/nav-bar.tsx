@@ -5,6 +5,9 @@ import { useState } from "react";
 import Image from 'next/image';
 import favicon from '@/app/favicon.ico'
 import ScrollToTop from "@/lib/scroll-to-top";
+
+import HamburgerMenu from "./hamburger-menu";
+
 export default function Navbar() {
   const [isOpen, setMenu] = useState(false);
   const [isClicked, setClicked] = useState(false);
@@ -53,31 +56,10 @@ export default function Navbar() {
       </ul>
 
       {/* Mobile Burger Button */}
-      <button
-        onClick={handleMenu}
-        className="flex flex-col justify-center items-center md:hidden w-8 h-8 gap-1 p-1"
-      >
-        <span
-          className={clsx(
-            "dark:bg-white block h-[2px] w-6 bg-blue-950 rounded transition-transform duration-300 origin-center",
-            { "bg-lime-600 rotate-45 translate-y-[6px]": isOpen }
-          )}
-        />
-        <span
-          className={clsx(
-            "dark:bg-white block h-[2px] w-6 bg-blue-950 rounded transition-opacity duration-300",
-            { "opacity-0": isOpen }
-          )}
-        />
-        <span
-          className={clsx(
-            "dark:bg-white block h-[2px] w-6 bg-blue-950 rounded transition-transform duration-300 origin-center",
-            { "bg-lime-600 -rotate-45 -translate-y-[6px]": isOpen }
-          )}
-        />
-      </button>
-
+      <HamburgerMenu isOpen={isOpen} handleMenu={handleMenu}/>
+      
       {/* Mobile Menu */}
+
       <div
         className={clsx(
           "absolute my-1 top-full right-1 w-50 bg-zinc-500/50 backdrop-blur-lg flex flex-col items-center shadow-lg md:hidden transform origin-top-right transition-all duration-500 overflow-hidden z-40 rounded-lg list-none",
