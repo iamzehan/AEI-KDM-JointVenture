@@ -15,7 +15,7 @@ export default function Blogs({data}:{data:Data}){
     return (
         <div className="
         h-full w-full md:w-2/3 
-        border-1 md:rounded-xl
+        border-gray-200/20 shadow-lg shadow-black/50 md:rounded-xl
         self-center
         shadow-sm flex flex-col">
             <BlogList title={title} blogs={blogs}/>

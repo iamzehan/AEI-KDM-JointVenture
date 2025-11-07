@@ -2,6 +2,13 @@ import { promises as fs } from "fs";
 
 import { NextRequest, NextResponse } from "next/server";
 
+interface Blog{
+  id:number;
+  title: string;
+  content: string[];
+  subsections: Blog[];
+}
+
 export async function GET(request:NextRequest, {params}:{params:Promise<{slug:string}>}) {
   const { slug }= await params;
   try {
@@ -11,7 +18,7 @@ export async function GET(request:NextRequest, {params}:{params:Promise<{slug:st
     );
     const data = JSON.parse(jsonData);
 
-    const filteredData = data.subsections.find(section=> section.id === Number(slug));
+    const filteredData = data.subsections.find((section:Blog)=> section.id === Number(slug));
 
     if (!filteredData) {
       return NextResponse.json(
