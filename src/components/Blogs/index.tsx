@@ -14,10 +14,10 @@ export default function Blogs({data}:{data:Data}){
     const blogs = data.subsections;
     return (
         <div className="
-        h-full w-full md:w-2/3 
-        border-gray-200/20 shadow-lg shadow-black/50 md:rounded-xl
+        h-full w-full  md:w-full lg:w-2/3
+        border-y border-gray-500/20 shadow-sm
         self-center
-        shadow-sm flex flex-col">
+        flex flex-col">
             <BlogList title={title} blogs={blogs}/>
         </div>
     )

@@ -2,7 +2,7 @@ import About from "@/components/About/index";
 
 export default function Page() {
   return (
-    <div>
+    <div className="flex justify-center">
       <About />
     </div>
   );
