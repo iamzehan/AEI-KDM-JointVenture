@@ -3,17 +3,8 @@ import Blogs from "@/components/Blogs";
 import { getAllBlogs } from "@/lib/blogs/route";
 import { RotateRight } from "@mui/icons-material";
 import { useEffect, useState, Suspense } from "react";
-
+import Loader from "@/components/Loader";
 import { DataUsage } from "@mui/icons-material";
-
-function Loading() {
-  return (
-    <div className="fixed top-0 left-0 w-screen h-screen flex flex-col items-center justify-center gap-2">
-      <DataUsage className="size-10 animate-spin text-gray-500" fontSize="large"/>
-      <p className="text-gray-600 font-medium">Fetching blogs...</p>
-    </div>
-  );
-}
 
 export default function Page() {
   const [data, setData] = useState(null);
@@ -28,7 +19,7 @@ export default function Page() {
     fetchData();
   }, []);
   if(!data){
-    return Loading();
+    return <Loader/>;
   };
   return (
     <div
