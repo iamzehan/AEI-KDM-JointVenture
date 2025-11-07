@@ -1,6 +1,7 @@
 "use client";
 import ScrollToTop from "@/lib/scroll-to-top";
 import Link from "next/link";
+import Icon from "../icons";
 export default function QuickNav() {
   const handleLinkClick = () => {
     ScrollToTop();
@@ -34,7 +35,7 @@ export default function QuickNav() {
         px-5 py-3 
         border rounded-lg"
         >
-          Explore Projects
+          Explore Projects <Icon name='Cases' className="animate-bounce text-green-400" size='small'/>
         </span>
       </Link>
       <Link href="/contact" onClick={handleLinkClick}>
@@ -50,7 +51,7 @@ export default function QuickNav() {
         px-5 py-3 
         border rounded-lg"
         >
-          Get Involved
+          Get Involved <Icon name='ArrowForward' size='small' className="pb-1 animate-lr"/>
         </span>
       </Link>
     </div>
