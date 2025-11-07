@@ -37,7 +37,7 @@ export default function QuickNav() {
           Explore Projects
         </span>
       </Link>
-      <Link href="#" onClick={handleLinkClick}>
+      <Link href="/contact" onClick={handleLinkClick}>
         <span
         className="
         text-white
