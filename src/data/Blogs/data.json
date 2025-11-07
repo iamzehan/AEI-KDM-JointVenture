@@ -90,6 +90,8 @@
         {
           "id": 1101,
           "title": "Problems Today",
+          "icon" : "Warning",
+          "color": "text-red-400",
           "content": [
             "High logistics & import costs for small bottlers",
             "Inefficient ship-to-ship transfers due to shallow ports",
@@ -100,6 +102,8 @@
         {
           "id": 1102,
           "title": "AEI's Solution",
+          "icon" : "EmojiObjects",
+          "color": "text-yellow-400",
           "content": [
             "Bulk imports & direct unloading — lower costs",
             "Wholesale supply to local bottlers in BDT — reduced forex pressure",
@@ -117,6 +121,8 @@
         {
           "id": 1111,
           "title": "Energy Security",
+          "icon":"OfflineBolt",
+          "color":"text-green-400",
           "content": [
             "Large strategic reserves to protect against global shocks."
           ],
@@ -125,6 +131,8 @@
         {
           "id": 1112,
           "title": "Financial Stability",
+          "icon":"AssuredWorkload",
+          "color":"text-red-400",
           "content": [
             "Consolidated imports reduce USD demand and help stabilize the Taka."
           ],
@@ -133,6 +141,8 @@
         {
           "id": 1113,
           "title": "Jobs & Supply Chain Revival",
+          "icon":"Work",
+          "color":"text-yellow-400",
           "content": [
             "Thousands of direct & indirect jobs; revived transport and manufacturing sectors."
           ],
