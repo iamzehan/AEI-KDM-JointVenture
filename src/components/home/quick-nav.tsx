@@ -26,14 +26,14 @@ export default function QuickNav() {
       <Link href="/projects" onClick={handleLinkClick}>
         <span
           className="
-        text-white
+        text-white shadow-md
         transition-color
         duration-500 
-        bg-zinc-950 
+        bg-zinc-950 border-1 border-zinc-500 rounded-lg
         hover:text-lime-600 
         hover:border-lime-600 
         px-5 py-3 
-        border rounded-lg"
+        "
         >
           Explore Projects <Icon name='Cases' className="animate-bounce text-green-400" size='small'/>
         </span>
@@ -41,7 +41,9 @@ export default function QuickNav() {
       <Link href="/contact" onClick={handleLinkClick}>
         <span
         className="
-        text-white
+        text-white shadow-md
+        transition-color
+        duration-500 
         bg-lime-600
         px-5 py-2 
         rounded
