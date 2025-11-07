@@ -34,4 +34,10 @@ export const links: NavLink[] = [
     icon: icons.BusinessOutlined,
     iconFilled: icons.Business
   },
+  {
+    label: "Contact",
+    href: "/contact",
+    icon: icons.MessageOutlined,
+    iconFilled: icons.Message
+  },
 ];
