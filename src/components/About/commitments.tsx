@@ -41,7 +41,7 @@ export default function Commitments() {
       className="
     flex flex-col gap-5
     px-10 py-15 w-full 
-    border-1 md:rounded-b-4xl border-gray-500/10 dark:border-x-0 dark:rounded-none
+    xl:border-1 xl:rounded-b-4xl border-gray-500/10 dark:border-x-0 dark:rounded-none
     shadow-sm shadow-gray-500/10 dark:shadow-none
     bg-white dark:bg-transparent
     "

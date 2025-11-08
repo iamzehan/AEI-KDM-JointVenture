@@ -40,8 +40,8 @@ export default function Heading() {
     bg-white dark:bg-transparent
     flex flex-col gap-3
     p-10 
-    border-1 border-gray-500/10 dark:border-r-0 dark:border-l-0
-    md:shadow-sm/10 md:rounded-t-4xl
+    xl:border-1 border-gray-500/10 dark:border-r-0 dark:border-l-0
+    xl:shadow-sm/10 xl:rounded-t-4xl
     dark:rounded-none text-justify"
     >
       <span className='text-white self-center rounded-full p-3 bg-red-400'>
