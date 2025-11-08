@@ -4,7 +4,7 @@ import { tiroBangla } from "@/lib/fonts";
 import Cards from "@/components/Home/Cards";
 import Benefits from "@/components/Home/benefits";
 import Footer from "@/components/Home/Footer";
-export default function Home() {
+export default function Page() {
   return (
     <div className="flex flex-col dark:bg-black">
       {/* Header Images go here */}
