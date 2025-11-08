@@ -220,8 +220,19 @@ export function getAllBlogs(): Blog {
 }
 // Strongly-typed shapes for blogs
 export function getBlogById(slug: string): Blog | undefined {
-  const filteredData = (data.subsections || []).find(
-    (section) => section.id === Number(slug)
-  );
-  return filteredData;
+  const id = Number(slug);
+  if (Number.isNaN(id)) return undefined;
+
+  // recursive search through the tree of subsections
+  function findById(node: Blog): Blog | undefined {
+    if (node.id === id) return node;
+    if (!node.subsections) return undefined;
+    for (const child of node.subsections) {
+      const found = findById(child);
+      if (found) return found;
+    }
+    return undefined;
+  }
+
+  return findById(data);
 }

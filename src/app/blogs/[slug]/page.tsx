@@ -4,8 +4,8 @@ import Icon from "@/components/icons";
 import clsx from "clsx";
 import { notFound } from "next/navigation";
 
-export default function Blog({ params }: { params: { slug: string } }) {
-  const { slug } = params;
+export default async function Blog({ params }: { params: { slug: string } }) {
+  const { slug } = await params;
 
   const data: Blog | undefined = getBlogById(slug);
   if (!data) notFound();
