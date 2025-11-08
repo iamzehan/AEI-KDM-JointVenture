@@ -1,17 +1,18 @@
 import BlogList from "./blogs-list"
 
 interface Blog {
-  id: number;
-  title: string;
-  content: string[]; // content is always an array of strings
-  subsections: Blog[]; // match your JSON field name
+    id: number;
+    title: string;
+    content: string[]; // content is always an array of strings
+    subsections?: Blog[]; // match your JSON field name
+    // optional UI props
+    icon?: string;
+    color?: string;
 }
-interface Data extends Blog{
-    data: Blog[];
-}
-export default function Blogs({data}:{data:Data}){
-    const title = data.title;
-    const blogs = data.subsections;
+
+export default function Blogs({ data }: { data: Blog }) {
+        const title = data.title;
+        const blogs = data.subsections ?? [];
     return (
         <div className="
         h-full w-full  md:w-full lg:w-2/3

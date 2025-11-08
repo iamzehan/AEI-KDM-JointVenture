@@ -1,4 +1,15 @@
-const data = {
+// Strongly-typed shapes for blogs
+export interface Blog {
+  id: number;
+  title: string;
+  content: string[];
+  subsections?: Blog[];
+  // optional presentation fields used by the UI
+  icon?: string;
+  color?: string;
+}
+
+const data: Blog = {
   id: 1,
   title: "A Game-Changer for Bangladesh’s Energy Supply",
   content: [],
@@ -126,7 +137,6 @@ const data = {
           content: [
             "Large strategic reserves to protect against global shocks.",
           ],
-          subsections: [],
         },
         {
           id: 1112,
@@ -136,7 +146,6 @@ const data = {
           content: [
             "Consolidated imports reduce USD demand and help stabilize the Taka.",
           ],
-          subsections: [],
         },
         {
           id: 1113,
@@ -146,7 +155,6 @@ const data = {
           content: [
             "Thousands of direct & indirect jobs; revived transport and manufacturing sectors.",
           ],
-          subsections: [],
         },
       ],
     },
@@ -203,27 +211,17 @@ const data = {
       content: [
         "We seek investors, strategic suppliers, and manufacturing partners. Contact us to request the investment deck and financial model.",
       ],
-      subsections: [],
     },
   ],
 };
 
-
-
-export function getAllBlogs(){
+export function getAllBlogs(): Blog {
   return data;
 }
-
-interface Blog {
-  id: number;
-  title: string;
-  content: string[];
-  subsections: Blog[];
-}
-
-export function getBlogById(slug: string) {
-  const filteredData = data.subsections.find(
-    (section: Blog) => section.id === Number(slug)
+// Strongly-typed shapes for blogs
+export function getBlogById(slug: string): Blog | undefined {
+  const filteredData = (data.subsections || []).find(
+    (section) => section.id === Number(slug)
   );
   return filteredData;
 }
