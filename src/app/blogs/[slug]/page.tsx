@@ -1,7 +1,8 @@
-import { getBlogById } from "@/lib/blogs/route";
 import * as MatarialIcon from "@mui/icons-material";
 import Icon from "@/components/icons";
 import clsx from "clsx";
+import { notFound } from "next/navigation";
+
 interface Data {
   id: number;
   icon?: keyof typeof MatarialIcon;
@@ -9,15 +10,30 @@ interface Data {
   title: string;
   content: string[];
   subsections: Data[];
+  error?: string;
 }
+
+async function getBlogData(slug: string): Promise<Data> {
+  const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL || ''}/api/blogs/${slug}`, {
+    next: { revalidate: 3600 } // Cache for 1 hour
+  });
+
+  if (!response.ok) {
+    if (response.status === 404) {
+      notFound();
+    }
+    throw new Error(`Failed to fetch blog post: ${response.statusText}`);
+  }
+
+  return response.json();
+}
+
 export default async function Blog({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: { slug: string };
 }) {
-  const { slug } = await params;
-  await new Promise((resolve) => setTimeout(resolve, 1000));
-  const data: Data = await getBlogById(slug);
+  const data = await getBlogData(params.slug);
   return (
     <div className="flex flex-col gap-5 w-fit self-center p-5">
       <p className="text-2xl font-extrabold">{data.title}</p>

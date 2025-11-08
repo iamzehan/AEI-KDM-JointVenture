@@ -1,26 +1,52 @@
 "use client";
 import Blogs from "@/components/Blogs";
-import { getAllBlogs } from "@/lib/blogs/route";
-import { RotateRight } from "@mui/icons-material";
-import { useEffect, useState, Suspense } from "react";
+import { useEffect, useState } from "react";
 import Loader from "@/components/Loader";
-import { DataUsage } from "@mui/icons-material";
+
+interface Blog {
+  id: number;
+  title: string;
+  content: string[];
+  subsections: Blog[];
+}
+
+interface BlogResponse {
+  subsections: Blog[];
+  error?: string;
+}
 
 export default function Page() {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState<BlogResponse | null>(null);
   useEffect(() => {
     async function fetchData() {
-      // const response = await fetch("/src/lib/api/blogs");
-      // const jsonData = await response.json();
-      // await new Promise((resolve)=> setTimeout(resolve, 300));
-      const jsonData = await getAllBlogs();
-      setData(jsonData);
+      try {
+        const response = await fetch("/api/blogs");
+        const jsonData = await response.json();
+        setData(jsonData);
+      } catch (error) {
+        console.error("Error fetching blogs:", error);
+        setData({ subsections: [], error: "Failed to load blogs" });
+      }
     }
     fetchData();
   }, []);
-  if(!data){
-    return <Loader/>;
+
+  if (!data) {
+    return <Loader />;
+  }
+
+  if (data.error) {
+    return <div className="text-center text-red-500">{data.error}</div>;
+  }
+
+  const formattedData = {
+    id: 0,
+    title: "Blog Posts",
+    content: [],
+    subsections: data.subsections,
+    data: data.subsections
   };
+
   return (
     <div
       className="flex flex-col gap-4 md:rounded-2xl
@@ -34,7 +60,7 @@ export default function Page() {
       >
         Blogs
       </p>
-      <Blogs data={data} />
+      <Blogs data={formattedData} />
     </div>
   );
 }
