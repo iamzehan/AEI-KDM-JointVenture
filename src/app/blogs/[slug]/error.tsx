@@ -1,3 +1,5 @@
+'use client';
+
 export default function Error({
   error,
   reset,
@@ -12,6 +14,7 @@ export default function Error({
       <button
         onClick={reset}
         className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors"
+        type="button"
       >
         Try again
       </button>
