@@ -32,7 +32,7 @@ export default function RootLayout({
         <header className="sticky top-0 z-50 overflow-x-clip">
           <Navbar />
         </header>
-        <main className="md:my-2 md:w-4/5 md:mx-auto flex flex-col min-h-screen">
+        <main className="md:my-2 md:4/5 xl:w-2/3 md:mx-auto flex flex-col min-h-screen">
           {children}
         </main>
         <Chat />
