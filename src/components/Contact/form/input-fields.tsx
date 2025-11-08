@@ -5,7 +5,7 @@ export default function Fields() {
     <fieldset
       className="
     flex flex-col gap-2
-    md:px-20 md:py-10 md:w-200
+    md:px-20 md:py-10 md:w-full
     md:bg-white dark:bg-transparent
     md:border md:rounded-xl border-gray-500/20 
     border-0 dark:border-0 
@@ -103,7 +103,7 @@ export default function Fields() {
       <div
         className="
       w-full flex flex-col-reverse
-      gap-20 md:gap-0
+      gap-20 md:gap-5
       items-center  md:flex-row 
       md:justify-around"
       >
