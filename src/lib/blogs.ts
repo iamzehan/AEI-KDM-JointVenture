@@ -1,0 +1,229 @@
+const data = {
+  id: 1,
+  title: "A Game-Changer for Bangladesh’s Energy Supply",
+  content: [],
+  subsections: [
+    {
+      id: 101,
+      title: "Deep-Water Jetty",
+      content: [
+        "VLGC-capable landing for large carriers — direct unloading reduces costs.",
+      ],
+      subsections: [],
+    },
+    {
+      id: 102,
+      title: "Bulk Storage Facility",
+      content: [
+        "Initial storage 500,000 MT — over 3 months of supply to ensure continuity.",
+      ],
+      subsections: [],
+    },
+    {
+      id: 103,
+      title: "Streamlined Distribution",
+      content: [
+        "Efficient logistics to local bottlers for fast & reliable deliveries.",
+      ],
+      subsections: [],
+    },
+    {
+      id: 104,
+      title: "The Only Gateway for Efficient Energy Supply",
+      content: [
+        "Moheshkhali offers natural deep-water access and 150 acres of prime frontage — an irreplaceable strategic advantage for direct VLGC operations in Bangladesh.",
+      ],
+      subsections: [],
+    },
+    {
+      id: 105,
+      title: "Why Moheshkhali?",
+      content: [
+        "Natural deep-water access for VLGCs — unique in Bangladesh",
+        "150 acres of deep-sea frontage — permanent competitive edge",
+        "Operational resilience and lower logistics costs",
+      ],
+      subsections: [],
+    },
+    {
+      id: 106,
+      title: "Fueling Bangladesh’s Growth with Reliable Energy",
+      content: [
+        "The LPG market in Bangladesh is growing rapidly. AEI’s terminal is designed to support current demand and forecasted growth.",
+      ],
+      subsections: [],
+    },
+    {
+      id: 107,
+      title: "Key Market Figures (2024)",
+      content: [
+        "Annual Demand: 1.9 Million MT",
+        "Market Value: US$ 4.0 Billion",
+        "Growth Rate: 10–12% annually",
+        "Import Dependency: 98%",
+      ],
+      subsections: [],
+    },
+    {
+      id: 108,
+      title: "Future Demand Forecast",
+      content: [
+        "By 2030: 3.0 Million MT",
+        "By 2035: 4.5 Million MT",
+        "Current national storage: ~100,000 MT (less than one month)",
+      ],
+      subsections: [],
+    },
+    {
+      id: 109,
+      title: "AEI's Role",
+      content: [
+        "With 500,000 MT storage, AEI will provide the strategic reserve Bangladesh needs — ensuring no shortages and stable prices as demand grows.",
+      ],
+      subsections: [],
+    },
+    {
+      id: 110,
+      title: "The LPG Industry Needs a Change. AEI + KDM JV Delivers It.",
+      content: [],
+      subsections: [
+        {
+          id: 1101,
+          title: "Problems Today",
+          icon: "Warning",
+          color: "text-red-400",
+          content: [
+            "High logistics & import costs for small bottlers",
+            "Inefficient ship-to-ship transfers due to shallow ports",
+            "Forex strain — repeated small USD transactions",
+          ],
+          subsections: [],
+        },
+        {
+          id: 1102,
+          title: "AEI's Solution",
+          icon: "EmojiObjects",
+          color: "text-yellow-400",
+          content: [
+            "Bulk imports & direct unloading — lower costs",
+            "Wholesale supply to local bottlers in BDT — reduced forex pressure",
+            "Reliable supply and improved margins for bottlers",
+          ],
+          subsections: [],
+        },
+      ],
+    },
+    {
+      id: 111,
+      title: "A Catalyst for Economic Growth",
+      content: [],
+      subsections: [
+        {
+          id: 1111,
+          title: "Energy Security",
+          icon: "OfflineBolt",
+          color: "text-green-400",
+          content: [
+            "Large strategic reserves to protect against global shocks.",
+          ],
+          subsections: [],
+        },
+        {
+          id: 1112,
+          title: "Financial Stability",
+          icon: "AssuredWorkload",
+          color: "text-red-400",
+          content: [
+            "Consolidated imports reduce USD demand and help stabilize the Taka.",
+          ],
+          subsections: [],
+        },
+        {
+          id: 1113,
+          title: "Jobs & Supply Chain Revival",
+          icon: "Work",
+          color: "text-yellow-400",
+          content: [
+            "Thousands of direct & indirect jobs; revived transport and manufacturing sectors.",
+          ],
+          subsections: [],
+        },
+      ],
+    },
+    {
+      id: 112,
+      title: "Invest in the Future of Bangladesh’s Energy",
+      content: [
+        "A first-mover advantage in a growing US$4B market — AEI + KDM JV offers a non-replicable asset with strong projected returns.",
+      ],
+      subsections: [],
+    },
+    {
+      id: 113,
+      title: "Financial Projections (Selected)",
+      content: [
+        "2028/29 (1.0M T share): US$ 50M @ $50/ton (BDT 650 Crore)",
+        "2028/29 (1.0M T share): US$ 75M @ $75/ton (BDT 975 Crore)",
+        "2034/35 (1.5M T share): US$ 75M @ $50/ton (BDT 975 Crore)",
+        "2034/35 (1.5M T share): US$ 112.5M @ $75/ton (BDT 1,462.5 Crore)",
+      ],
+      subsections: [],
+    },
+    {
+      id: 114,
+      title: "Why Invest?",
+      content: [
+        "First-mover monopoly for VLGC-capable port in Bangladesh",
+        "Non-replicable Moheshkhali location",
+        "Strong and growing market demand with predictable cash flows",
+      ],
+      subsections: [],
+    },
+    {
+      id: 115,
+      title: "A Once-in-a-Lifetime Investment Opportunity",
+      content: [
+        "We invite strategic equity partners to join AEI + KDM JV and share in the long-term upside of Bangladesh’s LPG infrastructure development.",
+      ],
+      subsections: [],
+    },
+    {
+      id: 116,
+      title: "What Partners Get",
+      content: [
+        "First-mover advantage & exclusivity",
+        "Low-risk asset in a high-demand market",
+        "Social & economic impact with measurable returns",
+      ],
+      subsections: [],
+    },
+    {
+      id: 117,
+      title: "How To Engage",
+      content: [
+        "We seek investors, strategic suppliers, and manufacturing partners. Contact us to request the investment deck and financial model.",
+      ],
+      subsections: [],
+    },
+  ],
+};
+
+
+
+export function getAllBlogs(){
+  return data;
+}
+
+interface Blog {
+  id: number;
+  title: string;
+  content: string[];
+  subsections: Blog[];
+}
+
+export function getBlogById(slug: string) {
+  const filteredData = data.subsections.find(
+    (section: Blog) => section.id === Number(slug)
+  );
+  return filteredData;
+}

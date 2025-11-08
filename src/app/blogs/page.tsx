@@ -1,52 +1,47 @@
 "use client";
 import Blogs from "@/components/Blogs";
+import { getAllBlogs } from "@/lib/blogs";
 import { useEffect, useState } from "react";
 import Loader from "@/components/Loader";
 
-interface Blog {
-  id: number;
-  title: string;
-  content: string[];
-  subsections: Blog[];
-}
-
-interface BlogResponse {
-  subsections: Blog[];
-  error?: string;
-}
-
+interface Data {
+    id: number;
+    title: string;
+    content: never[];
+    subsections: ({
+        id: number;
+        title: string;
+        content: string[];
+        subsections: never[];
+    } | {
+        id: number;
+        title: string;
+        content: never[];
+        subsections: {
+            id: number;
+            title: string;
+            icon: string;
+            color: string;
+            content: string[];
+            subsections: never[];
+        }[];
+    })[];
+  }
 export default function Page() {
-  const [data, setData] = useState<BlogResponse | null>(null);
+  const [data, setData] = useState(null);
   useEffect(() => {
     async function fetchData() {
-      try {
-        const response = await fetch("/api/blogs");
-        const jsonData = await response.json();
-        setData(jsonData);
-      } catch (error) {
-        console.error("Error fetching blogs:", error);
-        setData({ subsections: [], error: "Failed to load blogs" });
-      }
+      // const response = await fetch("/src/lib/api/blogs");
+      // const jsonData = await response.json();
+      // await new Promise((resolve)=> setTimeout(resolve, 300));
+      const jsonData:Data=  getAllBlogs();
+      setData(jsonData);
     }
     fetchData();
   }, []);
-
-  if (!data) {
-    return <Loader />;
-  }
-
-  if (data.error) {
-    return <div className="text-center text-red-500">{data.error}</div>;
-  }
-
-  const formattedData = {
-    id: 0,
-    title: "Blog Posts",
-    content: [],
-    subsections: data.subsections,
-    data: data.subsections
+  if(!data){
+    return <Loader/>;
   };
-
   return (
     <div
       className="flex flex-col gap-4 md:rounded-2xl
@@ -60,7 +55,7 @@ export default function Page() {
       >
         Blogs
       </p>
-      <Blogs data={formattedData} />
+      <Blogs data={data} />
     </div>
   );
 }
