@@ -6,10 +6,10 @@ export default function Fields() {
       className="
     flex flex-col gap-2
     md:px-20 md:py-10 md:w-full
-    md:bg-white dark:bg-transparent
-    md:border md:rounded-xl border-gray-500/20 
+    xl:bg-white dark:bg-transparent
+    xl:border xl:rounded-xl xl:border-gray-500/20 
     border-0 dark:border-0 
-    md:border-t md:shadow-md
+    xl:border-t xl:shadow-md
     "
     >
       <legend className="font-bold text-2xl mb-20 md:mb-0 md:text-4xl text-center text-blue-950 dark:text-white">

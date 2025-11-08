@@ -10,7 +10,7 @@ export default function Direct() {
     flex flex-col gap-2 w-full h-full xl:w-1/3
     bg-white dark:bg-transparent
     shadow-md/10
-    md:dark:border md:border-t md:rounded-xl md:border-gray-500/20 
+    xl:dark:border xl:border-t xl:rounded-xl xl:border-gray-500/20 
     p-5 md:p-10 dark:text-white">
       <p className="font-bold text-3xl pb-4 border-b-1 border-gray-500/20 text-blue-950 dark:text-white">Direct Contact</p>
       <p>
