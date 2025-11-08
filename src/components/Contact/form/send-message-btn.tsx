@@ -11,7 +11,7 @@ export default function Send() {
   return (
     <button
       className="
-    z-50 self-end md:self-auto
+    self-end md:self-auto
     relative
     flex gap-2 justify-center items-center w-fit aspect-square md:aspect-auto rounded-full
     bg-lime-600 py-2 px-4 md:rounded-md 
